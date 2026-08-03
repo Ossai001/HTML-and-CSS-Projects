@@ -1,0 +1,31 @@
+.squares {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 120px;
+
+    border: 2px solid #333333;
+    border-radius: 25%;
+    box-sizing: border-box;
+
+    position: relative;
+
+    background-image: url("file:///C:/Users/Chukwuka%20Ossai/Documents/myRepository/Basic_CSS_Demo/CSS/Smiley/Icon1.png");
+    background-size: 88px 88px;
+    background-repeat: no-repeat;
+    background-position: center 27px;
+
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+
+    text-shadow:
+        2px 2px 2px #333333,
+        -1px -1px 1px #333333;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.squares:hover {
+    background-image: url("file:///C:/Users/Chukwuka%20Ossai/Documents/myRepository/Basic_CSS_Demo/CSS/Smiley/Icon2.png");
+}

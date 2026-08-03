@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basic CSS Demo</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="C.png">
+    <link rel="shortcut icon" type="image/png" href="C.png">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:25px 0;
+            background:#fff;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:25px;
+            color:teal;
+            font-size:42px;
+            font-family:Georgia, serif;
+            text-shadow:3px 3px 5px gray;
+        }
+
+        .container{
+            width:560px;
+            height:560px;
+            margin:auto;
+            padding:10px;
+            background:antiquewhite;
+            border:3px solid #333;
+            border-radius:30px;
+            display:flex;
+            gap:8px;
+            align-items:flex-start;
+            overflow:hidden;
+            box-sizing:border-box;
+        }
+
+        .squares{
+            width:120px;
+            height:120px;
+            border:2px solid #333;
+            border-radius:25%;
+            position:relative;
+            cursor:pointer;
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+            text-shadow:2px 2px 3px black;
+            user-select:none;
+        }
+
+        .box1{background:#25B7F0;}
+        .box2{background:#B136D9;}
+        .box3{background:#C71D56;}
+        .box4{background:#21C939;}
+
+        .label{
+            display:block;
+            margin-top:5px;
+        }
+
+        .face{
+            position:absolute;
+            width:72px;
+            height:72px;
+            border:3px solid #111;
+            border-radius:50%;
+            left:50%;
+            top:40px;
+            transform:translateX(-50%);
+        }
+
+        .eye{
+            position:absolute;
+            width:14px;
+            height:14px;
+            background:#111;
+            border-radius:50%;
+            top:18px;
+        }
+
+        .left{
+            left:14px;
+        }
+
+        .right{
+            right:14px;
+        }
+
+        .mouth{
+            position:absolute;
+            width:42px;
+            height:20px;
+            left:50%;
+            bottom:12px;
+            transform:translateX(-50%);
+            border-bottom:4px solid #111;
+            border-radius:0 0 50px 50px;
+        }
+
+        .squares:hover .eye{
+            height:3px;
+            border-radius:5px;
+            top:23px;
+        }
+
+        .move{
+            animation:moveBox 1.2s ease-in-out;
+        }
+
+        @keyframes moveBox{
+            0%{
+                transform:translateY(0);
+            }
+            50%{
+                transform:translateY(300px);
+            }
+            100%{
+                transform:translateY(0);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Basic CSS Demo</h1>
+
+<div class="container">
+
+    <div class="squares box1">
+        <span class="label">Box 1</span>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+    <div class="squares box2">
+        <span class="label">Box 2</span>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+    <div class="squares box3">
+        <span class="label">Box 3</span>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+    <div class="squares box4">
+        <span class="label">Box 4</span>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+const boxes = document.querySelectorAll(".squares");
+
+boxes.forEach(function(box){
+
+    box.addEventListener("click",function(){
+
+        box.classList.remove("move");
+        void box.offsetWidth;
+        box.classList.add("move");
+
+    });
+
+    box.addEventListener("animationend",function(){
+
+        box.classList.remove("move");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
