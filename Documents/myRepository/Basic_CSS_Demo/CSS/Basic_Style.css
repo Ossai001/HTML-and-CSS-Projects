@@ -1,31 +1,38 @@
-.squares {
-    width: 120px;
-    height: 120px;
-    flex: 0 0 120px;
+<!DOCTYPE html>
+<html lang="en">
 
-    border: 2px solid #333333;
-    border-radius: 25%;
-    box-sizing: border-box;
+<head>
+    <meta charset="UTF-8">
+    <title>Basic CSS Demo</title>
+    <link rel="stylesheet" href="basic_style.css">
+</head>
 
-    position: relative;
+<body>
 
-    background-image: url("file:///C:/Users/Chukwuka%20Ossai/Documents/myRepository/Basic_CSS_Demo/CSS/Smiley/Icon1.png");
-    background-size: 88px 88px;
-    background-repeat: no-repeat;
-    background-position: center 27px;
+    <div>
+        <h1>Basic CSS Demo</h1>
+    </div>
 
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
+    <div class="container">
 
-    text-shadow:
-        2px 2px 2px #333333,
-        -1px -1px 1px #333333;
+        <div class="squares">
+            <p>Box 1</p>
+        </div>
 
-    cursor: pointer;
-    user-select: none;
-}
+        <div class="squares">
+            <p>Box 2</p>
+        </div>
 
-.squares:hover {
-    background-image: url("file:///C:/Users/Chukwuka%20Ossai/Documents/myRepository/Basic_CSS_Demo/CSS/Smiley/Icon2.png");
-}
+        <div class="squares">
+            <p>Box 3</p>
+        </div>
+
+        <div class="squares">
+            <p>Box 4</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
