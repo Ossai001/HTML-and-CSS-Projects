@@ -12,27 +12,34 @@ HTML and CSS Challenges
 Basic HTML and CSS Exercises 
 
 KIDZZY ONE-PAGE WEBSITE
+
 An educational website created for a children's learning brand, The Kidzzy One-Page Website features a navigation menu, an image gallery, an embedded video, a contact form and customised CSS styling. 
 
 ACADEMY CINEMAS BOOTSTRAP WEBSITE
+
 The Academy Cinemas' website was developed using Bootstrap 4. It features a responsive navigation bar, a Bootstrap grid system, movie cards, badges, showtimes, buttons, and professional content. 
 
 PROFESSIONAL PORTFOLIO WEBSITE 
+
 Using HTML and CSS, I developed my professional portfolio website, which highlights my professional background, software development skills, business experience, GitHub projects, and contact information. Find website and repository information below:
 
 Live website: chukwukaossai.com
 GitHub repository: Portfolio 
 
 CSS IMAGE EFFECTS PROJECT 
+
 The purpose of this project is to illustrate various CSS image effects, including filters, borders, rounded corners, hover effects, transitions, overlays, and animations. 
 
 CSS NAVIGATION MENU 
+
 Using HTML and CSS, this project illustrates the creation and styling of a drop-down menu. It includes structured navigation links and hover effects that can be interacted with. 
 
 MEDIA QUERY CHALLENGE 
+
 With CSS media queries, this responsive website changes its appearance on smaller screens. It serves as an example of how websites can adapt to PCs, tablets, and mobile devices. 
 
 HTML AND CSS CHALLENGES 
+
 Several front-end development techniques are demonstrated in these coding challenges, including:
 
 Centering and styling images
@@ -46,6 +53,7 @@ Applying CSS animations and hover effects
 Building responsive layouts 
 
 BASIC HTML AND CSS EXERCISES 
+
 As a basis for the development of websites, these exercises cover headings, paragraphs, links, images, lists, tables, forms, embedded videos, CSS selectors, colours, fonts, borders, and layout styling. 
 
 TECHNOLOGIES USED 
