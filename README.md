@@ -71,7 +71,6 @@ FileZilla
 
 Author:
 
-CHUKWUKA OSSAI
-
+CHUKWUKA OSSAI,
 An aspiring software developer and business professional
 
