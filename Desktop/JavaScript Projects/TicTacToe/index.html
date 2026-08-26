@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Arrow Function Challenge</title>
+</head>
+
+<body>
+    <h1>Arrow Function Challenge</h1>
+
+    <p>
+        Enter your name and click the button to execute the arrow function.
+    </p>
+
+    <label for="userName">Your name:</label>
+
+    <input
+        id="userName"
+        type="text"
+        placeholder="Enter your name"
+    >
+
+    <button onclick="displayWelcomeMessage()">
+        Display Message
+    </button>
+
+    <p id="ArrowResult"></p>
+
+    <!-- Inline JavaScript -->
+    <script>
+        /*
+        The original regular function would be written like this:
+
+        function displayWelcomeMessage() {
+            var userName =
+                document.getElementById("userName").value;
+
+            document.getElementById("ArrowResult").innerHTML =
+                "Welcome, " + userName +
+                "! You successfully executed a JavaScript function.";
+        }
+        */
+
+        // Rewrite the regular function as an arrow function.
+        const displayWelcomeMessage = () => {
+            // Retrieve the name entered by the user.
+            const userName =
+                document.getElementById("userName").value.trim();
+
+            // Check whether the user entered a name.
+            const message = userName === ""
+                ? "Please enter your name."
+                : "Welcome, " + userName +
+                  "! You successfully executed an arrow function.";
+
+            // Display the result.
+            document.getElementById("ArrowResult").innerHTML =
+                message;
+        };
+    </script>
+</body>
+</html>
