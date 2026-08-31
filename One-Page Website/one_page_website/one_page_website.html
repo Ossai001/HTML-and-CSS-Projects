@@ -3,27 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Kidzzy Learning Website</title>
 
-    <link rel="stylesheet" href="./CSS/one_page_website.css">
+    <!-- External CSS -->
+    <link
+        rel="stylesheet"
+        href="CSS/one_page_website.css">
 </head>
 
 <body>
 
     <!-- Navigation Menu -->
     <nav>
+
         <h2>Kidzzy Navigation</h2>
 
-        <a href="#home">Home</a> |
-        <a href="#pictures">Pictures</a> |
-        <a href="#videos">Videos</a> |
-        <a href="#contact">Contact</a> |
+        <a href="#home">Home</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
         <a href="#footer">Footer</a>
 
     </nav>
-
 
     <!-- Home Section -->
     <section id="home">
@@ -32,16 +38,15 @@
 
         <p>
             Welcome to Kidzzy, a fun educational website created for children
-            to learn letters, colours, numbers, and new words through
-            exciting pictures, songs, and videos.
+            to learn letters, colours, numbers and new words through exciting
+            pictures, songs and videos.
         </p>
 
         <p>
-            Kidzzy makes learning simple, fun, and enjoyable for young learners.
+            Kidzzy makes learning simple, fun and enjoyable for young learners.
         </p>
 
     </section>
-
 
     <!-- Pictures Section -->
     <section id="pictures">
@@ -49,30 +54,84 @@
         <h2>Kidzzy Learning Pictures</h2>
 
         <p>
-            Explore our colourful learning images.
+            Select any picture below to see its enlarged version.
         </p>
 
-        <img src="Kidzzy Images/Kidzzy_1.jpg"
-             alt="Kidzzy learning picture one"
-             width="300">
+        <div class="picture-gallery">
 
+            <img
+                class="gallery-image"
+                src="Kidzzy Images/Kidzzy_1.jpg"
+                alt="Kidzzy learning picture one"
+                tabindex="0">
 
-        <img src="Kidzzy Images/Kidzzy_2.png"
-             alt="Kidzzy learning picture two"
-             width="300">
+            <img
+                class="gallery-image"
+                src="Kidzzy Images/Kidzzy_2.png"
+                alt="Kidzzy learning picture two"
+                tabindex="0">
 
+            <img
+                class="gallery-image"
+                src="Kidzzy Images/Kidzzy_3.png"
+                alt="Kidzzy learning picture three"
+                tabindex="0">
 
-        <img src="Kidzzy Images/Kidzzy_3.png"
-             alt="Kidzzy learning picture three"
-             width="300">
+            <img
+                class="gallery-image"
+                src="Kidzzy Images/Kidzzy_4.png"
+                alt="Kidzzy learning picture four"
+                tabindex="0">
 
-
-        <img src="Kidzzy Images/Kidzzy_4.png"
-             alt="Kidzzy learning picture four"
-             width="300">
+        </div>
 
     </section>
 
+    <!-- Lightbox Modal -->
+    <div
+        id="lightbox"
+        class="lightbox"
+        aria-hidden="true">
+
+        <!-- Close Button -->
+        <button
+            class="close-lightbox"
+            type="button"
+            aria-label="Close lightbox">
+            &times;
+        </button>
+
+        <!-- Previous Button -->
+        <button
+            class="previous"
+            type="button"
+            aria-label="Display previous image">
+            &#10094;
+        </button>
+
+        <!-- Enlarged Image -->
+        <div class="lightbox-content">
+
+            <img
+                id="enlarged-image"
+                src="Kidzzy Images/Kidzzy_1.jpg"
+                alt="Enlarged Kidzzy learning picture">
+
+            <p id="image-caption">
+                Kidzzy learning picture one
+            </p>
+
+        </div>
+
+        <!-- Next Button -->
+        <button
+            class="next"
+            type="button"
+            aria-label="Display next image">
+            &#10095;
+        </button>
+
+    </div>
 
     <!-- Video Section -->
     <section id="videos">
@@ -80,69 +139,59 @@
         <h2>Kidzzy Educational Video</h2>
 
         <p>
-            Watch fun educational videos designed for children.
+            Watch a fun educational video designed especially for children.
         </p>
 
-
         <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/6yDtUDoQq0g"
             title="Kidzzy Learning Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
 
-
     </section>
 
-
-    <!-- Contact Form -->
+    <!-- Contact Section -->
     <section id="contact">
 
         <h2>Contact Kidzzy</h2>
 
-        <form>
+        <p>
+            Send us a message using the form below.
+        </p>
+
+        <form
+            action="#"
+            method="post">
 
             <label for="name">Name:</label>
-            <br>
 
-            <input 
+            <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Enter your name">
-
-            <br><br>
-
+                placeholder="Enter your name"
+                required>
 
             <label for="email">Email:</label>
-            <br>
 
-            <input 
+            <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Enter your email">
-
-            <br><br>
-
+                placeholder="Enter your email"
+                required>
 
             <label for="message">Message:</label>
-            <br>
 
             <textarea
                 id="message"
                 name="message"
                 rows="5"
-                cols="30"
-                placeholder="Write your message"></textarea>
+                placeholder="Write your message"
+                required></textarea>
 
-            <br><br>
-
-
-            <input 
+            <input
                 type="submit"
                 value="Send Message">
 
@@ -150,18 +199,19 @@
 
     </section>
 
-
     <!-- Footer -->
     <footer id="footer">
 
         <h2>Kidzzy</h2>
 
         <p>
-            © 2026 Kidzzy Learning. All rights reserved.
+            &copy; 2026 Kidzzy Learning. All rights reserved.
         </p>
 
     </footer>
 
+    <!-- External JavaScript -->
+    <script src="JS/one_page_website.js"></script>
 
 </body>
 
