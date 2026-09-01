@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OnReadyStateChange Challenge</title>
+
+    <!-- Connects this HTML document to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main container for the AJAX project -->
+    <main class="container">
+        <h1>OnReadyStateChange Challenge</h1>
+
+        <p>
+            Click the button below to load content using AJAX and the
+            <code>onreadystatechange</code> property.
+        </p>
+
+        <!-- Calls the loadContent function when clicked -->
+        <button type="button" onclick="loadContent()">
+            Load Content
+        </button>
+
+        <!-- Content from content.html will be displayed inside this element -->
+        <div id="ajax-content">
+            <p>The AJAX content will appear here.</p>
+        </div>
+    </main>
+
+    <script>
+        // This function sends an AJAX request for content.html
+        function loadContent() {
+
+            // Step 1: Create a new XMLHttpRequest object
+            const request = new XMLHttpRequest();
+
+            // Step 2: Monitor changes to the request's readyState
+            request.onreadystatechange = function () {
+
+                /*
+                    readyState 4 means the request is complete.
+                    status 200 means the server returned the file successfully.
+                */
+                if (this.readyState === 4 && this.status === 200) {
+
+                    // Display the server response inside the selected div
+                    document.getElementById("ajax-content").innerHTML =
+                        this.responseText;
+                }
+            };
+
+            // Step 3: Prepare an asynchronous GET request for content.html
+            request.open("GET", "content.html", true);
+
+            // Step 4: Send the AJAX request to the server
+            request.send();
+        }
+    </script>
+
+</body>
+</html>
